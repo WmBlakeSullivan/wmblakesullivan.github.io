@@ -1,0 +1,207 @@
+% Wm. Blake Sullivan's Resume
+% Based on the template by 
+% Andrew McNabb
+
+\documentclass[10pt,oneside]{article}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+
+\pagestyle{empty}
+\geometry{letterpaper,tmargin=0.22in,bmargin=0.22in,lmargin=0.50in,rmargin=0.50in,headheight=0in,headsep=0in,footskip=.1in}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+% Name and contact information
+\newcommand{\name}{Wm. Blake Sullivan}
+\newcommand{\addr}{4255 E River Road, Bld. 16 Unit C, West Henrietta, NY 14586}
+\newcommand{\phone}{(251) 586-2749}
+\newcommand{\email}{wbsllvn@csh.rit.edu}
+\newcommand{\github}{https://github.com/wmblakesullivan}
+\newcommand{\linkedin}{https://www.linkedin.com/in/wmblakesullivan}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands and environments
+
+% This defines how the name looks
+\newcommand{\bigname}[1]{
+	\begin{center}\fontfamily{bch}\selectfont\Huge\scshape#1\end{center}
+}
+
+% A ressection is a main section (<H1>Section</H1>)
+\newenvironment{ressection}[1]{
+	\vspace{3pt}
+	{\fontfamily{bch}\selectfont\Large#1}
+	\begin{itemize}
+	\vspace{2pt}
+}{
+	\end{itemize}
+}
+
+% A resitem is a simple list element in a ressection (first level)
+\newcommand{\resitem}[1]{
+	\vspace{-2pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A ressubitem is a simple list element in anything but a ressection (second level)
+\newcommand{\ressubitem}[1]{
+	\vspace{-1pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A resbigitem is a complex list element for stuff like jobs and education:
+%  Arg 1: Name of company or university
+%  Arg 2: Location and/or date range
+%  Arg 3: Title
+\newcommand{\resbigitem}[3]{
+	\vspace{-3pt}
+	\item
+	\textbf{#1} --- #2 \\
+	\textit{#3}
+}
+
+% A resbigitem is a complex list element for stuff like projects
+%  Arg 1: Name of project
+%  Arg 2: Date
+%  Arg 3: Link or other info
+\newcommand{\resaltitem}[3]{
+	\vspace{-3pt}
+	\item
+	\textbf{#1} \hfill #2 \\
+	\textit{#3}
+}
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec}[3]{
+	\resbigitem{#1}{#2}{#3}
+	\vspace{-1pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+% This is a list that comes with a resaltitem
+\newenvironment{resaltsec}[3]{
+	\resaltitem{#1}{#2}{#3}
+	\vspace{-1pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+% This is a simple sublist
+\newenvironment{reslist}[1]{
+	\resitem{\textbf{#1}}
+	\vspace{-3pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Now for the actual document:
+
+\begin{document}
+
+\fontfamily{bch} \selectfont
+
+% Name with horizontal rule
+\bigname{\name}
+
+\vspace{-4pt} \rule{\textwidth}{1pt}
+
+\vspace{-1pt} {\normalsize\itshape \addr \hfill \phone \\ \linkedin \hfill \github \\ \email}
+
+\vspace{15 pt}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{ressection}{Objective}
+
+  	\ressubitem{Seeking co-operative education employment in the field of software/web application development.}
+
+  \end{ressection}
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Education}
+
+	\begin{ressubsec}{Rochester Institute of Technology}{Rochester, NY}{Bachelor of Science in Computer Science}
+		\ressubitem{Concentrating in Web Application Development}
+	\end{ressubsec}
+
+\end{ressection}
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Skills}
+
+
+	\begin{reslist}{Programming Languages:}
+		\ressubitem{Proficient in Java, Javascript, Python, HTML, CSS}
+		\ressubitem{Familiar with Kotlin, MongoDB, C/C++/C\#, \LaTeX, MIPS, SQL, PostgreSQL}
+	\end{reslist}
+
+	\begin{reslist}{Tools and Software:}
+		\ressubitem{Proficient with Vim, Git \& Github}
+		\ressubitem{Familiar with MongoChef, Subversion, Meteor, Django, Android Studio, X Code}
+		\ressubitem{Operating Systems: Windows XP to present, OS X 10.9 to present}
+	\end{reslist}
+
+\end{ressection}
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Personal Projects}
+
+	\begin{resaltsec}{WoolBrain}{October 2016 -- Present}{https://github.com/WoolBrain/WoolBrain}
+		\ressubitem{An extension of the explicitly-named BF language: https://www.esolangs.org/wiki/BF (warning: some explicit language).}
+		\ressubitem{Built using Minecraft command blocks and takes wool blocks as input.}
+		\ressubitem{Unlike other Minecraft BF implementations, this version is scalable and is only limited by the memory of the Minecraft application.}
+	\end{resaltsec}
+\end{ressection}
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Experience}
+
+	\begin{ressubsec}{ICanCodeClub}{Rochester, NY\hfill November 2015 -- September 2017}{Coding Instructor \& Lesson Developer}
+		\ressubitem{Taught students 1st-12th grade the basics of programming with the use of game design, robotics, and more.}
+		\ressubitem{Planned and wrote lessons for students to follow in a variety of languages.}
+	\end{ressubsec}
+	\begin{ressubsec}{Bryx, Inc.}{Rochester, NY\hfill June 2016 -- December 2016}{Software Developer (Co-op)}
+		\ressubitem{Planning and development of new web-based applications.}
+		\ressubitem{Maintained the public website and dealt with level 1 \& 2 tech support issues.}
+		\ressubitem{Personal project at work laid out the groundwork for a new product.}
+	\end{ressubsec}
+	\begin{ressubsec}{Business Information Solutions}{Mobile, AL\hfill June 2012 -- August 2012}{Information Systems Technician Intern}
+		\ressubitem{Gained experience in general IT customer service, technical support, and installation.}
+		\ressubitem{Worked on a major Ethernet cabling installation of a newly built corporate building.}
+	\end{ressubsec}
+
+\end{ressection}
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Activities}
+
+	\resitem{Computer Science House @ Rochester Institute of Technology\hfill August 2014 -- Present}
+	\resitem{FIRST Robotics Team 3469 Captain/Programmer \hfill August 2013 -- May 2014}
+	\resitem{Coastal Cleanup Volunteer \hfill August 2010 -- July 2015}
+
+\end{ressection}
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+% vim: set spell tw=150 noet :
