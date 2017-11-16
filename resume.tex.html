@@ -1,207 +1,226 @@
-% Wm. Blake Sullivan's Resume
-% Based on the template by 
-% Andrew McNabb
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="description" content="Personal Website for Wm. Blake Sullivan">
+	<meta name="author" content="Wm. Blake Sullivan">
 
-\documentclass[10pt,oneside]{article}
-\usepackage{geometry}
-\usepackage[T1]{fontenc}
+	<title>Resume Source</title>
 
-\pagestyle{empty}
-\geometry{letterpaper,tmargin=0.22in,bmargin=0.22in,lmargin=0.50in,rmargin=0.50in,headheight=0in,headsep=0in,footskip=.1in}
+	<!--CSS-->
+	<link rel="stylesheet" type="text/css" href="css/codesource.css">
 
-\setlength{\parindent}{0in}
-\setlength{\parskip}{0in}
-\setlength{\itemsep}{0in}
-\setlength{\topsep}{0in}
-\setlength{\tabcolsep}{0in}
+	<!--Fonts-->
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+</head>
+<body class="linenos">
+			<span class="comment">% Wm. Blake Sullivan's Resume</span>
+			<span class="comment">% Based on the template by </span>
+			<span class="comment">% Andrew McNabb</span>
 
-% Name and contact information
-\newcommand{\name}{Wm. Blake Sullivan}
-\newcommand{\addr}{4255 E River Road, Bld. 16 Unit C, West Henrietta, NY 14586}
-\newcommand{\phone}{(251) 586-2749}
-\newcommand{\email}{wbsllvn@csh.rit.edu}
-\newcommand{\github}{https://github.com/wmblakesullivan}
-\newcommand{\linkedin}{https://www.linkedin.com/in/wmblakesullivan}
+			<span class="blue">\documentclass</span>[10pt,oneside]<span class="g">{</span>article<span class="g">}</span>
+			<span class="blue">\usepackage</span><span class="g">{</span>geometry<span class="g">}</span>
+			<span class="blue">\usepackage</span>[T1]<span class="g">{</span>fontenc<span class="g">}</span>
 
+			<span class="blue">\pagestyle</span><span class="g">{</span>empty<span class="g">}</span>
+			<span class="blue">\geometry</span><span class="g">{</span>letterpaper,tmargin=0.22in,bmargin=0.22in,lmargin=0.50in,rmargin=0.50in,headheight=0in,headsep=0in,footskip=.1in<span class="g">}</span>
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% New commands and environments
+			<span class="blue">\setlength</span><span class="g">{</span><span class="blue">\parindent</span><span class="g">}</span><span class="g">{</span>0in<span class="g">}</span>
+			<span class="blue">\setlength</span><span class="g">{</span><span class="blue">\parskip</span><span class="g">}</span><span class="g">{</span>0in<span class="g">}</span>
+			<span class="blue">\setlength</span><span class="g">{</span><span class="blue">\itemsep</span><span class="g">}</span><span class="g">{</span>0in<span class="g">}</span>
+			<span class="blue">\setlength</span><span class="g">{</span><span class="blue">\topsep</span><span class="g">}</span><span class="g">{</span>0in<span class="g">}</span>
+			<span class="blue">\setlength</span><span class="g">{</span><span class="blue">\tabcolsep</span><span class="g">}</span><span class="g">{</span>0in<span class="g">}</span>
 
-% This defines how the name looks
-\newcommand{\bigname}[1]{
-	\begin{center}\fontfamily{bch}\selectfont\Huge\scshape#1\end{center}
-}
-
-% A ressection is a main section (<H1>Section</H1>)
-\newenvironment{ressection}[1]{
-	\vspace{3pt}
-	{\fontfamily{bch}\selectfont\Large#1}
-	\begin{itemize}
-	\vspace{2pt}
-}{
-	\end{itemize}
-}
-
-% A resitem is a simple list element in a ressection (first level)
-\newcommand{\resitem}[1]{
-	\vspace{-2pt}
-	\item \begin{flushleft} #1 \end{flushleft}
-}
-
-% A ressubitem is a simple list element in anything but a ressection (second level)
-\newcommand{\ressubitem}[1]{
-	\vspace{-1pt}
-	\item \begin{flushleft} #1 \end{flushleft}
-}
-
-% A resbigitem is a complex list element for stuff like jobs and education:
-%  Arg 1: Name of company or university
-%  Arg 2: Location and/or date range
-%  Arg 3: Title
-\newcommand{\resbigitem}[3]{
-	\vspace{-3pt}
-	\item
-	\textbf{#1} --- #2 \\
-	\textit{#3}
-}
-
-% A resbigitem is a complex list element for stuff like projects
-%  Arg 1: Name of project
-%  Arg 2: Date
-%  Arg 3: Link or other info
-\newcommand{\resaltitem}[3]{
-	\vspace{-3pt}
-	\item
-	\textbf{#1} \hfill #2 \\
-	\textit{#3}
-}
-% This is a list that comes with a resbigitem
-\newenvironment{ressubsec}[3]{
-	\resbigitem{#1}{#2}{#3}
-	\vspace{-1pt}
-	\begin{itemize}
-}{
-	\end{itemize}
-}
-
-% This is a list that comes with a resaltitem
-\newenvironment{resaltsec}[3]{
-	\resaltitem{#1}{#2}{#3}
-	\vspace{-1pt}
-	\begin{itemize}
-}{
-	\end{itemize}
-}
-% This is a simple sublist
-\newenvironment{reslist}[1]{
-	\resitem{\textbf{#1}}
-	\vspace{-3pt}
-	\begin{itemize}
-}{
-	\end{itemize}
-}
+			<span class="comment">%Name and contact information</span>
+			<span class="blue">\newcommand</span><span class="g">{</span><span class="blue">\name</span><span class="g">}</span><span class="g">{</span>Wm. Blake Sullivan<span class="g">}</span>
+			<span class="blue">\newcommand</span><span class="g">{</span><span class="blue">\addr</span><span class="g">}</span><span class="g">{</span>4255 E River Road, Bld. 16 Unit C, West Henrietta, NY 14586<span class="g">}</span>
+			<span class="blue">\newcommand</span><span class="g">{</span><span class="blue">\phone</span><span class="g">}</span><span class="g">{</span>(251) 586-2749<span class="g">}</span>
+			<span class="blue">\newcommand</span><span class="g">{</span><span class="blue">\email</span><span class="g">}</span><span class="g">{</span>wbsllvn@csh.rit.edu<span class="g">}</span>
+			<span class="blue">\newcommand</span><span class="g">{</span><span class="blue">\github</span><span class="g">}</span><span class="g">{</span>https://github.com/wmblakesullivan<span class="g">}</span>
+			<span class="blue">\newcommand</span><span class="g">{</span><span class="blue">\linkedin</span><span class="g">}</span><span class="g">{</span>https://www.linkedin.com/in/wmblakesullivan<span class="g">}</span>
 
 
+			<span class="comment"><span class="comment">%%%%%%%%%%%%%%%%%%%%%%%%</span><span class="comment">%%%%%%%%%%%%%%%%%%%%%%%%</span>%%%%%%%%%</span>
+			<span class="comment">%New commands and environments</span>
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Now for the actual document:
+			<span class="comment">%This defines how the name looks</span>
+			<span class="blue">\newcommand</span><span class="g">{</span><span class="blue">\bigname</span><span class="g">}</span>[1]<span class="g">{</span>
+				<span class="blue">\begin</span><span class="g">{</span>center<span class="g">}</span><span class="blue">\fontfamily</span><span class="g">{</span>bch<span class="g">}</span><span class="blue">\selectfont</span><span class="blue">\Huge</span><span class="blue">\scshape#1<span class="blue">\end</span><span class="g">{</span>center<span class="g">}</span>
+			<span class="g">}</span>
 
-\begin{document}
+			<span class="comment">%A ressection is a main section</span>
+			<span class="blue">\newenvironment</span><span class="g">{</span>ressection<span class="g">}</span>[1]<span class="g">{</span>
+				<span class="blue">\vspace</span><span class="g">{</span>3pt<span class="g">}</span>
+				<span class="g">{</span><span class="blue">\fontfamily</span><span class="g">{</span>bch<span class="g">}</span><span class="blue">\selectfont</span><span class="blue">\Large</span>#1<span class="g">}</span>
+				<span class="blue">\begin</span><span class="g">{</span>itemize<span class="g">}</span>
+				<span class="blue">\vspace</span><span class="g">{</span>2pt<span class="g">}</span>
+			<span class="g">}</span><span class="g">{</span>
+				<span class="blue">\end</span><span class="g">{</span>itemize<span class="g">}</span>
+			<span class="g">}</span>
 
-\fontfamily{bch} \selectfont
+			<span class="comment">%A resitem is a simple list element in a ressection (first level)</span>
+			<span class="blue">\newcommand</span><span class="g">{</span><span class="blue">\resitem</span><span class="g">}</span>[1]<span class="g">{</span>
+				<span class="blue">\vspace</span><span class="g">{</span>-2pt<span class="g">}</span>
+				<span class="blue">\item</span><span class="blue">\begin</span><span class="g">{</span>flushleft<span class="g">}</span> #1 <span class="blue">\end</span><span class="g">{</span>flushleft<span class="g">}</span>
+			<span class="g">}</span>
 
-% Name with horizontal rule
-\bigname{\name}
+			<span class="comment">%A ressubitem is a simple list element in anything but a ressection (second level)</span>
+			<span class="blue">\newcommand</span><span class="g">{</span><span class="blue">\ressubitem</span><span class="g">}</span>[1]<span class="g">{</span>
+				<span class="blue">\vspace</span><span class="g">{</span>-1pt<span class="g">}</span>
+				<span class="blue">\item</span><span class="blue">\begin</span><span class="g">{</span>flushleft<span class="g">}</span> #1 <span class="blue">\end</span><span class="g">{</span>flushleft<span class="g">}</span>
+			<span class="g">}</span>
 
-\vspace{-4pt} \rule{\textwidth}{1pt}
+			<span class="comment">%A resbigitem is a complex list element for stuff like jobs and education:</span>
+			<span class="comment">% Arg 1: Name of company or university
+			<span class="comment">% Arg 2: Location and/or date range
+			<span class="comment">% Arg 3: Title
+			<span class="blue">\newcommand</span><span class="g">{</span><span class="blue">\resbigitem</span><span class="g">}</span>[3]<span class="g">{</span>
+				<span class="blue">\vspace</span><span class="g">{</span>-3pt<span class="g">}</span>
+				<span class="blue">\item</span>
+				<span class="blue">\textbf</span><span class="g">{</span>#1<span class="g">}</span> --- #2 <span class="blue">\\</span>
+				<span class="blue">\textit<span class="g">{</span>#3<span class="g">}</span>
+			<span class="g">}</span>
 
-\vspace{-1pt} {\normalsize\itshape \addr \hfill \phone \\ \linkedin \hfill \github \\ \email}
+			<span class="comment">%A resbigitem is a complex list element for stuff like projects</span>
+			<span class="comment">% Arg 1: Name of project</span>
+			<span class="comment">% Arg 2: Date</span>
+			<span class="comment">% Arg 3: Link or other info</span>
+			<span class="blue">\newcommand<span class="g">{</span><span class="blue">\resaltitem<span class="g">}</span>[3]<span class="g">{</span>
+				<span class="blue">\vspace<span class="g">{</span>-3pt<span class="g">}</span>
+				<span class="blue">\item
+				<span class="blue">\textbf<span class="g">{</span>#1<span class="g">}</span> <span class="blue">\hfill #2 <span class="blue">\\</span>
+				<span class="blue">\textit</span><span class="g">{</span>#3<span class="g">}</span>
+			<span class="g">}</span>
+			<span class="comment">%This is a list that comes with a resbigitem</span>
+			<span class="blue">\newenvironment</span><span class="g">{</span>ressubsec<span class="g">}</span>[3]<span class="g">{</span>
+				<span class="blue">\resbigitem</span><span class="g">{</span>#1<span class="g">}</span><span class="g">{</span>#2<span class="g">}</span><span class="g">{</span>#3<span class="g">}</span>
+				<span class="blue">\vspace</span><span class="g">{</span>-1pt<span class="g">}</span>
+				<span class="blue">\begin</span><span class="g">{</span>itemize<span class="g">}</span>
+			<span class="g">}</span><span class="g">{</span>
+				<span class="blue">\end</span><span class="g">{</span>itemize<span class="g">}</span>
+			<span class="g">}</span>
 
-\vspace{15 pt}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-  \begin{ressection}{Objective}
-
-  	\ressubitem{Seeking co-operative education employment in the field of software/web application development.}
-
-  \end{ressection}
-%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{ressection}{Education}
-
-	\begin{ressubsec}{Rochester Institute of Technology}{Rochester, NY}{Bachelor of Science in Computer Science}
-		\ressubitem{Concentrating in Web Application Development}
-	\end{ressubsec}
-
-\end{ressection}
-%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{ressection}{Skills}
-
-
-	\begin{reslist}{Programming Languages:}
-		\ressubitem{Proficient in Java, Javascript, Python, HTML, CSS}
-		\ressubitem{Familiar with Kotlin, MongoDB, C/C++/C\#, \LaTeX, MIPS, SQL, PostgreSQL}
-	\end{reslist}
-
-	\begin{reslist}{Tools and Software:}
-		\ressubitem{Proficient with Vim, Git \& Github}
-		\ressubitem{Familiar with MongoChef, Subversion, Meteor, Django, Android Studio, X Code}
-		\ressubitem{Operating Systems: Windows XP to present, OS X 10.9 to present}
-	\end{reslist}
-
-\end{ressection}
-%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{ressection}{Personal Projects}
-
-	\begin{resaltsec}{WoolBrain}{October 2016 -- Present}{https://github.com/WoolBrain/WoolBrain}
-		\ressubitem{An extension of the explicitly-named BF language: https://www.esolangs.org/wiki/BF (warning: some explicit language).}
-		\ressubitem{Built using Minecraft command blocks and takes wool blocks as input.}
-		\ressubitem{Unlike other Minecraft BF implementations, this version is scalable and is only limited by the memory of the Minecraft application.}
-	\end{resaltsec}
-\end{ressection}
-%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{ressection}{Experience}
-
-	\begin{ressubsec}{ICanCodeClub}{Rochester, NY\hfill November 2015 -- September 2017}{Coding Instructor \& Lesson Developer}
-		\ressubitem{Taught students 1st-12th grade the basics of programming with the use of game design, robotics, and more.}
-		\ressubitem{Planned and wrote lessons for students to follow in a variety of languages.}
-	\end{ressubsec}
-	\begin{ressubsec}{Bryx, Inc.}{Rochester, NY\hfill June 2016 -- December 2016}{Software Developer (Co-op)}
-		\ressubitem{Planning and development of new web-based applications.}
-		\ressubitem{Maintained the public website and dealt with level 1 \& 2 tech support issues.}
-		\ressubitem{Personal project at work laid out the groundwork for a new product.}
-	\end{ressubsec}
-	\begin{ressubsec}{Business Information Solutions}{Mobile, AL\hfill June 2012 -- August 2012}{Information Systems Technician Intern}
-		\ressubitem{Gained experience in general IT customer service, technical support, and installation.}
-		\ressubitem{Worked on a major Ethernet cabling installation of a newly built corporate building.}
-	\end{ressubsec}
-
-\end{ressection}
-%%%%%%%%%%%%%%%%%%%%%%%%
+			<span class="comment">%This is a list that comes with a resaltitem</span>
+			<span class="blue">\newenvironment</span><span class="g">{</span>resaltsec<span class="g">}</span>[3]<span class="g">{</span>
+				<span class="blue">\resaltitem</span><span class="g">{</span>#1<span class="g">}</span><span class="g">{</span>#2<span class="g">}</span><span class="g">{</span>#3<span class="g">}</span>
+				<span class="blue">\vspace</span><span class="g">{</span>-1pt<span class="g">}</span>
+				<span class="blue">\begin</span><span class="g">{</span>itemize<span class="g">}</span>
+			<span class="g">}</span><span class="g">{</span>
+				<span class="blue">\end</span><span class="g">{</span>itemize<span class="g">}</span>
+			<span class="g">}</span>
+			<span class="comment">%This is a simple sublist</span>
+			<span class="blue">\newenvironment</span><span class="g">{</span>reslist<span class="g">}</span>[1]<span class="g">{</span>
+				<span class="blue">\resitem</span><span class="g">{</span><span class="blue">\textbf</span><span class="g">{</span>#1<span class="g">}</span><span class="g">}</span>
+				<span class="blue">\vspace</span><span class="g">{</span>-3pt<span class="g">}</span>
+				<span class="blue">\begin</span><span class="g">{</span>itemize<span class="g">}</span>
+			<span class="g">}</span><span class="g">{</span>
+				<span class="blue">\end</span><span class="g">{</span>itemize<span class="g">}</span>
+			<span class="g">}</span>
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{ressection}{Activities}
 
-	\resitem{Computer Science House @ Rochester Institute of Technology\hfill August 2014 -- Present}
-	\resitem{FIRST Robotics Team 3469 Captain/Programmer \hfill August 2013 -- May 2014}
-	\resitem{Coastal Cleanup Volunteer \hfill August 2010 -- July 2015}
+			<span class="comment"><span class="comment">%%%%%%%%%%%%%%%%%%%%%%%%</span><span class="comment">%%%%%%%%%%%%%%%%%%%%%%%%</span>%%%%%%%%%</span>
+			<span class="comment">%Now for the actual document:</span>
 
-\end{ressection}
-%%%%%%%%%%%%%%%%%%%%%%%%
+			<span class="blue">\begin</span><span class="g">{</span>document<span class="g">}</span>
 
-\end{document}
-% vim: set spell tw=150 noet :
+			<span class="blue">\fontfamily</span><span class="g">{</span>bch<span class="g">}</span> <span class="blue">\selectfont</span>
+
+			<span class="comment">%Name with horizontal rule</span>
+			<span class="blue">\bigname</span><span class="g">{</span><span class="blue">\name</span><span class="g">}</span>
+
+			<span class="blue">\vspace</span><span class="g">{</span>-4pt<span class="g">}</span> <span class="blue">\rule</span><span class="g">{</span><span class="blue">\textwidth</span><span class="g">}</span><span class="g">{</span>1pt<span class="g">}</span>
+
+			<span class="blue">\vspace</span><span class="g">{</span>-1pt<span class="g">}</span> <span class="g">{</span><span class="blue">\normalsize</span><span class="blue">\itshape</span><span class="blue">\addr </span><span class="blue">\hfill </span><span class="blue">\phone </span><span class="blue">\\</span> <span class="blue">\linkedin </span><span class="blue">\hfill </span><span class="blue">\github </span><span class="blue">\\</span> <span class="blue">\email</span><span class="g">}</span>
+
+			<span class="blue">\vspace</span><span class="g">{</span>15 pt<span class="g">}</span>
+
+
+
+			<span class="comment">%%%%%%%%%%%%%%%%%%%%%%%%</span>
+			  <span class="blue">\begin</span><span class="g">{</span>ressection<span class="g">}</span><span class="g">{</span>Objective<span class="g">}</span>
+
+			  	<span class="blue">\ressubitem</span><span class="g">{</span>Seeking co-operative education employment in the field of software/web application development.<span class="g">}</span>
+
+			  <span class="blue">\end</span><span class="g">{</span>ressection<span class="g">}</span>
+			<span class="comment">%%%%%%%%%%%%%%%%%%%%%%%%</span>
+
+
+			<span class="comment">%%%%%%%%%%%%%%%%%%%%%%%%</span>
+			<span class="blue">\begin</span><span class="g">{</span>ressection<span class="g">}</span><span class="g">{</span>Education<span class="g">}</span>
+
+				<span class="blue">\begin</span><span class="g">{</span>ressubsec<span class="g">}</span><span class="g">{</span>Rochester Institute of Technology<span class="g">}</span><span class="g">{</span>Rochester, NY<span class="g">}</span><span class="g">{</span>Bachelor of Science in Computer Science<span class="g">}</span>
+					<span class="blue">\ressubitem</span><span class="g">{</span>Concentrating in Web Application Development<span class="g">}</span>
+				<span class="blue">\end</span><span class="g">{</span>ressubsec<span class="g">}</span>
+
+			<span class="blue">\end</span><span class="g">{</span>ressection<span class="g">}</span>
+			<span class="comment">%%%%%%%%%%%%%%%%%%%%%%%%</span>
+
+
+			<span class="comment">%%%%%%%%%%%%%%%%%%%%%%%%</span>
+			<span class="blue">\begin</span><span class="g">{</span>ressection<span class="g">}</span><span class="g">{</span>Skills<span class="g">}</span>
+
+
+				<span class="blue">\begin</span><span class="g">{</span>reslist<span class="g">}</span><span class="g">{</span>Programming Languages:<span class="g">}</span>
+					<span class="blue">\ressubitem</span><span class="g">{</span>Proficient in Java, Javascript, Python, HTML, CSS<span class="g">}</span>
+					<span class="blue">\ressubitem</span><span class="g">{</span>Familiar with Kotlin, MongoDB, C/C++/C<span class="blue">\#</span>, <span class="blue">\LaTeX</span>, MIPS, SQL, PostgreSQL<span class="g">}</span>
+				<span class="blue">\end</span><span class="g">{</span>reslist<span class="g">}</span>
+
+				<span class="blue">\begin</span><span class="g">{</span>reslist<span class="g">}</span><span class="g">{</span>Tools and Software:<span class="g">}</span>
+					<span class="blue">\ressubitem</span><span class="g">{</span>Proficient with Vim, Git <span class="blue">\&amp;</span> Github<span class="g">}</span>
+					<span class="blue">\ressubitem</span><span class="g">{</span>Familiar with MongoChef, Subversion, Meteor, Django, Android Studio, X Code<span class="g">}</span>
+					<span class="blue">\ressubitem</span><span class="g">{</span>Operating Systems: Windows XP to present, OS X 10.9 to present<span class="g">}</span>
+				<span class="blue">\end</span><span class="g">{</span>reslist<span class="g">}</span>
+
+			<span class="blue">\end</span><span class="g">{</span>ressection<span class="g">}</span>
+			<span class="comment">%%%%%%%%%%%%%%%%%%%%%%%%</span>
+
+
+			<span class="comment">%%%%%%%%%%%%%%%%%%%%%%%%</span>
+			<span class="blue">\begin</span><span class="g">{</span>ressection<span class="g">}</span><span class="g">{</span>Personal Projects<span class="g">}</span>
+
+				<span class="blue">\begin</span><span class="g">{</span>resaltsec<span class="g">}</span><span class="g">{</span>WoolBrain<span class="g">}</span><span class="g">{</span>October 2016 -- Present<span class="g">}</span><span class="g">{</span>https://github.com/WoolBrain/WoolBrain<span class="g">}</span>
+					<span class="blue">\ressubitem</span><span class="g">{</span>An extension of the explicitly-named BF language: https://www.esolangs.org/wiki/BF (warning: some explicit language).<span class="g">}</span>
+					<span class="blue">\ressubitem</span><span class="g">{</span>Built using Minecraft command blocks and takes wool blocks as input.<span class="g">}</span>
+					<span class="blue">\ressubitem</span><span class="g">{</span>Unlike other Minecraft BF implementations, this version is scalable and is only limited by the memory of the Minecraft application.<span class="g">}</span>
+				<span class="blue">\end</span><span class="g">{</span>resaltsec<span class="g">}</span>
+			<span class="blue">\end</span><span class="g">{</span>ressection<span class="g">}</span>
+			<span class="comment">%%%%%%%%%%%%%%%%%%%%%%%%</span>
+
+
+			<span class="comment">%%%%%%%%%%%%%%%%%%%%%%%%</span>
+			<span class="blue">\begin</span><span class="g">{</span>ressection<span class="g">}</span><span class="g">{</span>Experience<span class="g">}</span>
+
+				<span class="blue">\begin</span><span class="g">{</span>ressubsec<span class="g">}</span><span class="g">{</span>ICanCodeClub<span class="g">}</span><span class="g">{</span>Rochester, NY<span class="blue">\hfill</span> November 2015 -- September 2017<span class="g">}</span><span class="g">{</span>Coding Instructor <span class="blue">\&amp;</span> Lesson Developer<span class="g">}</span>
+					<span class="blue">\ressubitem</span><span class="g">{</span>Taught students 1st-12th grade the basics of programming with the use of game design, robotics, and more.<span class="g">}</span>
+					<span class="blue">\ressubitem</span><span class="g">{</span>Planned and wrote lessons for students to follow in a variety of languages.<span class="g">}</span>
+				<span class="blue">\end</span><span class="g">{</span>ressubsec<span class="g">}</span>
+				<span class="blue">\begin</span><span class="g">{</span>ressubsec<span class="g">}</span><span class="g">{</span>Bryx, Inc.<span class="g">}</span><span class="g">{</span>Rochester, NY<span class="blue">\hfill</span> June 2016 -- December 2016<span class="g">}</span><span class="g">{</span>Software Developer (Co-op)<span class="g">}</span>
+					<span class="blue">\ressubitem</span><span class="g">{</span>Planning and development of new web-based applications.<span class="g">}</span>
+					<span class="blue">\ressubitem</span><span class="g">{</span>Maintained the public website and dealt with level 1 <span class="blue">\&amp;</span> 2 tech support issues.<span class="g">}</span>
+					<span class="blue">\ressubitem</span><span class="g">{</span>Personal project at work laid out the groundwork for a new product.<span class="g">}</span>
+				<span class="blue">\end</span><span class="g">{</span>ressubsec<span class="g">}</span>
+				<span class="blue">\begin</span><span class="g">{</span>ressubsec<span class="g">}</span><span class="g">{</span>Business Information Solutions<span class="g">}</span><span class="g">{</span>Mobile, AL<span class="blue">\hfill</span> June 2012 -- August 2012<span class="g">}</span><span class="g">{</span>Information Systems Technician Intern<span class="g">}</span>
+					<span class="blue">\ressubitem</span><span class="g">{</span>Gained experience in general IT customer service, technical support, and installation.<span class="g">}</span>
+					<span class="blue">\ressubitem</span><span class="g">{</span>Worked on a major Ethernet cabling installation of a newly built corporate building.<span class="g">}</span>
+				<span class="blue">\end</span><span class="g">{</span>ressubsec<span class="g">}</span>
+
+			<span class="blue">\end</span><span class="g">{</span>ressection<span class="g">}</span>
+			<span class="comment">%%%%%%%%%%%%%%%%%%%%%%%%</span>
+
+
+			<span class="comment">%%%%%%%%%%%%%%%%%%%%%%%%</span>
+			<span class="blue">\begin</span><span class="g">{</span>ressection<span class="g">}</span><span class="g">{</span>Activities<span class="g">}</span>
+
+				<span class="blue">\resitem</span><span class="g">{</span>Computer Science House @ Rochester Institute of Technology<span class="blue">\hfill</span> August 2014 -- Present<span class="g">}</span>
+				<span class="blue">\resitem</span><span class="g">{</span>FIRST Robotics Team 3469 Captain/Programmer <span class="blue">\hfill</span> August 2013 -- May 2014<span class="g">}</span>
+				<span class="blue">\resitem</span><span class="g">{</span>Coastal Cleanup Volunteer <span class="blue">\hfill</span> August 2010 -- July 2015<span class="g">}</span>
+
+			<span class="blue">\end</span><span class="g">{</span>ressection<span class="g">}</span>
+			<span class="comment">%%%%%%%%%%%%%%%%%%%%%%%%</span>
+
+			<span class="blue">\end</span><span class="g">{</span>document<span class="g">}</span>
+			<span class="comment">%vim: set spell tw=150 noet :</span>
+</body>
+</html>
